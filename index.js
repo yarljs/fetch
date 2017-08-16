@@ -2,7 +2,7 @@ const reduce = require('@yarljs/reduce');
 const ReduxThunk = require('redux-thunk').default;
 const queryString = require('query-string');
 
-function fetching(uri, options={}, slice) {
+function fetching(uri, slice, options={}) {
   let res = (params, transform) => {
     const type = this.type;
     return (dispatch, getState) => {
